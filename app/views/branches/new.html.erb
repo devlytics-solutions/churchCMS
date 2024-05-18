@@ -1,0 +1,20 @@
+<h1>New Branch</h1>
+
+<%= form_with model: @branch do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  
+  <div>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div>
+    <%= form.label :church_id, "Church" %>
+    <%= form.collection_select :church_id, Church.all, :id, :name, prompt: true %>
+  </div>
+  
+  <%= form.submit %>
+<% end %>

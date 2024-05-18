@@ -1,0 +1,15 @@
+<h1>New Attendance</h1>
+
+<%= form_with model: @attendance do |form| %>
+  <div>
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </div>
+  
+  <div>
+    <%= form.label :member_id, "Member" %>
+    <%= form.collection_select :member_id, Member.all, :id, :name, prompt: true %>
+  </div>
+  
+  <%= form.submit %>
+<% end %>

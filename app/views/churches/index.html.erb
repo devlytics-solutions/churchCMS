@@ -1,0 +1,18 @@
+<h1>Churches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @churches.each do |church| %>
+      <tr>
+        <td><%= church.name %></td>
+        <td><%= church.location %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

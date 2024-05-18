@@ -1,0 +1,20 @@
+<h1>New Member</h1>
+
+<%= form_with model: @member do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  
+  <div>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+  </div>
+
+  <div>
+    <%= form.label :branch_id, "Branch" %>
+    <%= form.collection_select :branch_id, Branch.all, :id, :name, prompt: true %>
+  </div>
+  
+  <%= form.submit %>
+<% end %>
