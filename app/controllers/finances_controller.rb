@@ -1,5 +1,6 @@
 # app/controllers/finances_controller.rb
 class FinancesController < ApplicationController
+    before_action :authenticate_user!
     def index
       @finances = Finance.all
     end

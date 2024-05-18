@@ -1,5 +1,6 @@
 # app/controllers/attendances_controller.rb
 class AttendancesController < ApplicationController
+    before_action :authenticate_user!
     def index
       @attendances = Attendance.all
     end

@@ -1,5 +1,6 @@
 # app/controllers/churches_controller.rb
 class ChurchesController < ApplicationController
+  before_action :authenticate_user!
     def index
       @churches = Church.all
     end

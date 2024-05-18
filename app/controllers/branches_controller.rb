@@ -1,5 +1,6 @@
 # app/controllers/branches_controller.rb
 class BranchesController < ApplicationController
+  before_action :authenticate_user!
     def index
       @branches = Branch.all
     end
